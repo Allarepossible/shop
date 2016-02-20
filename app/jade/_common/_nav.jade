@@ -1,0 +1,7 @@
+nav.nav
+	.container
+		ul.nav__list
+			- var nav = ['Планшеты', 'Мобильные телефоны', 'Mp3 плееры', 'Персональные компьютеры', 'Ноутбуки', 'Аксессуары', 'Бытовая техника']
+			each item in nav
+				li.nav__item
+					a(href="#" class="nav__link") #{item}

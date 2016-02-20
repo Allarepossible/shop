@@ -1,0 +1,55 @@
+/* --------- content --------- */
+
+.article {
+	.container {
+		@include clearfix;
+	}
+}
+
+.main_content{
+	background-color: $color_light;
+	width: 100%;
+	height: auto;
+
+	.container{
+		padding-top: 15px;
+	}
+
+}
+
+.main_head_text{
+	font-size: 20px;
+	color: $color_dark;
+	font-family: $font_very_bold;
+	margin-bottom: 25px;
+	margin-left: -2px;
+}
+.right_content{
+	width: 743px;
+	display: block;
+	float: right;
+}
+.content {
+	width: $container-width - 400;
+	float: left;
+	margin-left: 50px;
+}
+.main_information{
+	background-color: $color_light;
+	display: block;
+	clear: both;
+}
+
+.info_container{
+	margin-bottom: 30px;
+}
+
+.text_info{
+	font-size: 14px;
+	text-indent: 30px;	
+	text-align: justify;
+}
+
+
+
+

@@ -1,0 +1,16 @@
+mixin nav(className, items, activeIndex)
+	nav(class=className)
+		.container
+			ul(class="#{className}__list")
+				each item, index in items
+					li(class="#{className}__item" + ((activeIndex == index) ? " active" : ''))
+						a(href="#" class="#{className}__link")= item
+
+
+mixin breadcrumbs(items)
+	.breadcrumbs
+		.container
+			ul.breadcrumbs__list
+				each item, ndx in items
+					li.breadcrumbs__item(class="#{ndx == items.length - 1 ? 'breadcrumbs__item_active' : ''}")
+						a(href="#").breadcrumbs__link= item
