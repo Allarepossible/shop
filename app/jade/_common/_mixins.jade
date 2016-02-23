@@ -14,3 +14,61 @@ mixin breadcrumbs(items)
 				each item, ndx in items
 					li.breadcrumbs__item(class="#{ndx == items.length - 1 ? 'breadcrumbs__item_active' : ''}")
 						a(href="#").breadcrumbs__link= item
+
+mixin checkbox(titles)
+	each item in titles
+		li(class="checkbox__item")
+			input(type="checkbox" id=item).checkbox_input
+			label(for="#{item}").checkbox_label #{item}
+
+mixin colorChoose(colors)
+	.color__list
+		each item in colors
+			li.color__item
+				a(href="#" class="color__link #{item}")
+					span.color__text= item
+
+//- mixin products(products)
+
+//- 	ul.products_list
+//- 		li.products
+//- 			.products__slideshow
+//- 				img(src="images/samsung.jpg", alt="").big-photo 
+//- 				ul.mini__list
+//- 					li.mini__item
+//- 						img(src="images/samsung1.jpg", alt="").mini__img-active
+//- 					li.mini__item
+//- 						img(src="images/samsung2.jpg", alt="").mini__img
+//- 					li.mini__item
+//- 						img(src="images/samsung3.jpg", alt="").mini__img
+//- 			.products__title
+//- 			.products__feature
+//- 				ul.features__list
+//- 					li.features__item
+//- 						.features_name
+//- 						.features_value
+//- 					li.features__item
+//- 						.features_name
+//- 						.features_value
+//- 					li.features__item
+//- 						.features_name
+//- 						.features_value
+//- 					li.features__item
+//- 						.features_name
+//- 						.features_value
+//- 					li.features__item
+//- 						.features_name
+//- 						.features_value
+//- 					li.features__item
+//- 						.features_name
+//- 						.features_value
+//- 					li.features__item
+//- 						.features_name
+//- 						.features_value
+//- 			.products__reiting
+//- 				.reiting__stars
+//- 				.reiting__value
+//- 			.products__price
+//- 			.products_nallichie
+//- 			button.products__buy	
+
