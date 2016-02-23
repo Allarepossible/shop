@@ -26,9 +26,9 @@ $(document).ready(function() {
     	e.preventDefault();
 
     	var $this = $(this),
-    		item = $this.closest('.basic__item'),
-    		content = item.find('.basic_inner'),
-    		duration = 300;
+    		  item = $this.closest('.basic__item'),
+    		  content = item.find('.basic_inner'),
+    		  duration = 300;
 
     	if($this.hasClass('no_active')) {
     		$this.removeClass('no_active')
@@ -84,5 +84,28 @@ $(function() {
     $( "#price_range2" ).val(  $( ".price_range__slider" ).slider( "values", 1 ));
 
   });
-    
+
+// Вид продукции
+$('.sort__view').on('click', function (e) {
+      e.preventDefault();
+      //удаляем активный класс
+      for (var i = 0; i < 3; i++) {
+        $('.sort__view'+ i +'-hover').removeClass('sort__view'+ i +'-hover');
+      }
+      var items = $(this).closest('.sort__view-item'),
+          item = $(this).children(),
+          itemPosition = items.index(),
+          viewActiveClass = 'sort__view'+ itemPosition +'-hover',
+          content = $('.content').children('ul'),
+          contentClass = 'products_list'+ itemPosition +'';
+
+      //меняем вид продукции и добавляем активный класс
+      if(!content.hasClass(contentClass)){
+          content.removeClass();
+          content.addClass(contentClass);
+          item.addClass(viewActiveClass);
+      }
+      
+    });
+  
 });

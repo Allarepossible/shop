@@ -42,7 +42,7 @@
 	margin-top: 10px;
 }
 
-.sort__view-list{
+.sort__view-list, .sort__view-item{
 	display: inline-block;
     vertical-align: bottom;
 	position: relative;   
@@ -59,7 +59,8 @@ $views-layout: horizontal;
 $views-spacing: 70px;
 @import "views/*.png";
 
-$views: view1, view2, view3;
+$views: view0, view1, view2;
+$views-active: view0-hover, view1-hover, view2-hover;
 
 @each $item in $views {
 	.sort__view-#{$item} {
@@ -69,6 +70,15 @@ $views: view1, view2, view3;
 		width: $width;
 		height: $height;
 	}
+}
+@each $item in $views-active {	
+	.sort__#{$item} {
+		@include views-sprite($item);
+		$height : views-sprite-height($item);
+		$width : views-sprite-width($item);
+		width: $width;
+		height: $height;
+	}	
 }
 
 .select2-container {
