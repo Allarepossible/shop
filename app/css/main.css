@@ -82,7 +82,7 @@ body {
   height: auto !important;
   height: 100%;
   overflow: hidden;
-  min-width: 1120px;
+  min-width: 1256px;
 }
 .wrapper:after {
   content: "";
@@ -234,6 +234,8 @@ footer {
   font-family: "OpenSansSemiBold", Arial, sans-serif;
   margin-left: 114px;
   line-height: 1.2;
+  color: black;
+  text-decoration: none;
 }
 .header__phone:before {
   content: "";
@@ -301,6 +303,10 @@ footer {
   font-size: 16px;
   padding: 5px 13px;
   color: #fff;
+  cursor: pointer;
+}
+.search__submit:hover {
+  background-color: #e84100;
 }
 
 .navigation {
@@ -338,19 +344,26 @@ footer {
 
 .nav__item {
   display: inline-block;
-  padding: 16px 14px;
   cursor: pointer;
+  padding: 16px 15px;
+  margin-left: -4px;
 }
 .nav__item:hover {
   background-color: #e4e2e2;
 }
+.nav__item:first-child {
+  margin-left: 0;
+}
 
-.nav__item_active {
+.nav__item-active {
   background-color: #ff6e35;
   font-family: "OpenSansSemiBold", Arial, sans-serif;
 }
-.nav__item_active a {
+.nav__item-active a {
   color: #fff;
+}
+.nav__item-active:hover {
+  background-color: #ff6e35;
 }
 
 .nav__link {
@@ -388,6 +401,9 @@ footer {
   text-decoration: underline;
   color: #ff6e35;
 }
+.breadcrumbs__item_active .breadcrumbs__link:hover {
+  text-decoration: none;
+}
 
 /* --------- content --------- */
 .article .container:before, .article .container:after {
@@ -411,8 +427,8 @@ footer {
   font-size: 20px;
   color: #333333;
   font-family: "OpenSansBold", Arial, sans-serif;
-  margin-bottom: 27px;
   margin-left: -2px;
+  margin-bottom: 20px;
 }
 
 .right_content {
@@ -423,6 +439,13 @@ footer {
 
 .content {
   float: left;
+}
+.content:before, .content:after {
+  content: "";
+  display: table;
+}
+.content:after {
+  clear: both;
 }
 
 .main_information {
@@ -493,7 +516,7 @@ footer {
 
 .products__title {
   font-size: 14px;
-  padding: 0 16px;
+  padding-bottom: 15px;
   font-family: "OpenSansSemiBold", Arial, sans-serif;
   color: #000;
   line-height: 1.429;
@@ -542,6 +565,8 @@ footer {
 
 .big-photo {
   margin-top: 6px;
+  height: 125px;
+  width: auto;
   position: absolute;
   left: 50%;
   -webkit-transform: translateX(-50%);
@@ -581,6 +606,12 @@ footer {
 .mini__item:hover {
   border-color: #333333;
 }
+
+.slideshow_pic {
+  display: block;
+  height: 100%;
+}
+
 .mini__item-active {
   border-color: #ff6e35;
 }
@@ -589,6 +620,7 @@ footer {
 }
 
 .mini__img {
+  height: 28px;
   position: absolute;
   left: 50%;
   -webkit-transform: translateX(-50%);
@@ -706,7 +738,7 @@ footer {
   position: relative;
   padding: 20px 20px 9px 20px;
   display: block;
-  width: 741px;
+  width: 740px;
   margin-left: 0;
   border-bottom: none;
   -webkit-border-radius: 0;
@@ -803,7 +835,7 @@ footer {
 .products_list0 .products_nallichie {
   display: block;
   float: right;
-  margin: 39px 0 0 -67px;
+  margin: 39px 0 0 -66px;
 }
 .products_list0 .products__buy {
   display: block;
@@ -817,7 +849,7 @@ footer {
 .products_list2 .products {
   position: relative;
   margin-bottom: 0;
-  padding: 7px 11px 3px;
+  padding: 7px 11px 9px;
   display: block;
   width: 740px;
   margin-left: 0;
@@ -864,8 +896,8 @@ footer {
   margin-right: 5px;
 }
 .products_list2 .products_right_content {
-  display: inline-block;
-  vertical-align: top;
+  display: block;
+  float: right;
   margin-top: 2px;
 }
 .products_list2 .mini__item {
@@ -902,6 +934,9 @@ footer {
   font-family: "OpenSansRegular", Arial, sans-serif;
   text-overflow: ellipsis;
 }
+.products_list2 .products__title:before {
+  content: "Smartphone ";
+}
 .products_list2 .products__reiting {
   display: none;
 }
@@ -920,6 +955,7 @@ footer {
 .path_products {
   display: block;
   float: right;
+  padding-bottom: 5px;
 }
 
 .path__list {
@@ -1211,7 +1247,7 @@ footer {
   border: 1px solid #dee1e4;
 }
 .color__link:hover {
-  border: 2px solid #f60;
+  border: 2px solid #ff6e35;
 }
 .color__text {
   position: absolute;
@@ -1265,6 +1301,10 @@ footer {
 
 .brown {
   background-color: #7f401d;
+}
+
+.choosen {
+  border: 2px solid #ff6e35;
 }
 
 .color__list {
@@ -1350,6 +1390,7 @@ footer {
 
 /* --------- footer --------- */
 .footer {
+  min-width: 1256px;
   position: relative;
   background-image: url(/images/footer.png);
 }

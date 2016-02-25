@@ -212,7 +212,7 @@
     height: 37px;
     border: 1px solid #dee1e4;
     &:hover {
-      border: 2px solid #f60;
+      border: 2px solid $color_orange;
     }
   }    
   &__text {
@@ -235,6 +235,9 @@
 .pink { background-color: #dc78ad; }
 .brown { background-color: #7f401d; }
 
+.choosen{
+      border: 2px solid $color_orange;	
+}
 .color__list{
 	display: block;
 	margin-top: 14px;

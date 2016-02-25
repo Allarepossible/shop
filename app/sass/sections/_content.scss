@@ -21,8 +21,8 @@
 	font-size: 20px;
 	color: $color_dark;
 	font-family: $font_very_bold;
-	margin-bottom: 27px;
 	margin-left: -2px;
+	margin-bottom: 20px;
 }
 .right_content{
 	width: 743px;
@@ -31,6 +31,7 @@
 }
 .content {
 	float: left;
+	@include clearfix;
 }
 .main_information{
 	background-color: $color_light;
@@ -87,7 +88,7 @@
 
 .products__title{
 	font-size: 14px;
-	padding: 0 16px;
+	padding-bottom: 15px;
 	font-family: $font_bold;
 	color: #000;
 	line-height: 1.429;
@@ -125,6 +126,8 @@
 }
 .big-photo{
 	margin-top: 6px;
+	height: 125px;
+	width: auto;
 	@include gorizontal-center;
 }
 .mini__list{
@@ -149,15 +152,20 @@
 	&:hover{
 	  border-color: $color_dark;
 	}
-	&-active{
-	  border-color: $color_orange;
-	  &:hover{
-	  	border-color: $color_orange;
-		}
-	}
+}
+.slideshow_pic{
+	display: block;
+	height: 100%;
+}
+.mini__item-active{
+	border-color: $color_orange;
 
+	&:hover{
+		border-color: $color_orange;
+	}
 }
 .mini__img{
+	height: 28px;
 	@include gorizontal-center;
 }
 .reiting__stars{
@@ -244,7 +252,7 @@
 		position: relative;
 		padding: 20px 20px 9px 20px;
 		display: block;
-		width: 741px;
+		width: 740px;
 		margin-left: 0;
 		@include clearfix;
 		border-bottom: none;	
@@ -323,7 +331,7 @@
 	.products_nallichie{
 		display: block;
 		float: right;
-		margin: 39px 0 0 -67px;
+		margin: 39px 0 0 -66px;
 
 	}
 	.products__buy{
@@ -337,7 +345,7 @@
 	.products{
 		position: relative;
 		margin-bottom: 0;
-		padding: 7px 11px 3px;
+		padding: 7px 11px 9px;
 		display: block;
 		width: 740px;
 		margin-left: 0;
@@ -370,8 +378,8 @@
 		
 	}
 	.products_right_content{
-		display: inline-block;
-		vertical-align: top;
+		display: block;
+		float: right;
 		margin-top: 2px;
 	}
 	.mini__item{
@@ -407,6 +415,9 @@
 		white-space: nowrap;
 		font-family: $body_font;
 		text-overflow: ellipsis;
+		&:before{
+			content: "Smartphone ";
+		}
 	}
 
 	.products__reiting{
@@ -421,8 +432,8 @@
 		margin: 0px 16px 0 37px;
 	}
 	.products__buy{
-	padding: 7px 15px;
-    margin-bottom: 5px;
+		padding: 7px 15px;
+	    margin-bottom: 5px;
 	}
 }
 
@@ -430,6 +441,8 @@
 .path_products{
 	display: block;
 	float: right;
+	padding-bottom: 5px;
+
 }
 
 .path__list{
