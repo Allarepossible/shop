@@ -824,7 +824,7 @@ footer {
 }
 .products_list0 .products_right_content {
   display: inline-block;
-  padding-left: 24px;
+  padding-left: 21px;
   border-left: 1px solid #dee1e4;
 }
 .products_list0 .products__price {
@@ -835,11 +835,12 @@ footer {
 .products_list0 .products_nallichie {
   display: block;
   float: right;
-  margin: 39px 0 0 -66px;
+  margin: 39px 0 0 -68px;
 }
 .products_list0 .products__buy {
   display: block;
   margin-bottom: 32px;
+  margin-right: 1px;
 }
 
 /*******      view 3       ********/
@@ -1399,8 +1400,15 @@ footer {
   overflow: visible;
 }
 
-.footer__content {
-  display: inline-block;
+.footer_content {
+  display: block;
+}
+.footer_content:before, .footer_content:after {
+  content: "";
+  display: table;
+}
+.footer_content:after {
+  clear: both;
 }
 
 .footer_logo {
@@ -1499,7 +1507,8 @@ footer {
 
 .copyright {
   text-align: center;
-  margin-top: 50px;
+  position: absolute;
+  bottom: -20px;
   padding-top: 5px;
   width: 100%;
   border-top: 1px solid #494949;

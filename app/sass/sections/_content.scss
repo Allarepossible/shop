@@ -320,7 +320,7 @@
 
 	.products_right_content{
 		display: inline-block;
-		padding-left: 24px;
+		padding-left: 21px;
 		border-left: 1px solid rgb(222, 225, 228);
 	}
 	.products__price{
@@ -331,12 +331,13 @@
 	.products_nallichie{
 		display: block;
 		float: right;
-		margin: 39px 0 0 -66px;
+		margin: 39px 0 0 -68px;
 
 	}
 	.products__buy{
 		display: block;
 		margin-bottom: 32px;
+		margin-right: 1px;
 	}
 }
 /*******      view 3       ********/

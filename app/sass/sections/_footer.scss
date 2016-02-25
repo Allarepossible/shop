@@ -12,9 +12,11 @@
 	}
 }
 
-.footer__content {
-	display: inline-block;
+.footer_content {
+	display: block;
+	@include clearfix;
 }
+
 .footer_logo{
 	margin-top: 36px;
 }
@@ -84,7 +86,8 @@ $social: vk, fb, tw;
 
 .copyright{
 	text-align: center;
-    margin-top: 50px;
+	position: absolute;
+	bottom: -20px;
 	padding-top: 5px;
 	width: 100%;
 	border-top: 1px solid rgb(73, 73, 73);
