@@ -11,10 +11,11 @@ header.header
 			.adress ул. Маяковская 6, офис 17
 	.header__bottom
 		.container
-			img(src="images/logo/logo.png", alt="Cooltech").logo
-			.search
+			a(href="index.html")
+				img(src="images/logo/logo.png", alt="Cooltech").logo
+			form.search
 				input(type="text" placeholder="Что будем искать").search__input 
-				.search__submit Найти
+				button(type="submit").search__submit Найти
 			.navigation
 				ul.navigation__list
 					- var nav = ['Карта проезда', 'История заказов', 'Корзина']

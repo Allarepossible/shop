@@ -6,13 +6,13 @@
 
 .nav__list {
 	display: inline-block;
+	font-size: 0px;
 }
 
 .nav__item {
 	display: inline-block;
 	cursor: pointer;
-	padding: 16px 15px;	
-	margin-left: -4px;	
+	padding: 16px 15px;		
 	&:hover{
 		background-color: #e4e2e2;
 	}
