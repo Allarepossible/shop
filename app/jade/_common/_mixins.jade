@@ -14,16 +14,3 @@ mixin breadcrumbs(items)
 				each item, ndx in items
 					li.breadcrumbs__item(class="#{ndx == items.length - 1 ? 'breadcrumbs__item_active' : ''}")
 						a(href="#").breadcrumbs__link= item
-
-mixin checkbox(titles)
-	each item in titles
-		li(class="filter__item")
-			input(type="checkbox" id=item).input.input_type_checkbox
-			label(for="#{item}").label.label_type_checkbox #{item}
-
-mixin colorChoose(colors)
-	ul.color__list
-		each item in colors
-			li.color__item
-				a(href = "#" class = "color__link #{item}")
-					span.color__text = item

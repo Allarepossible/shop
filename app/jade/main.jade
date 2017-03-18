@@ -25,8 +25,7 @@ html(lang='ru')
 				.container
 					block navigation
 					.layout
-						aside.sidebar
-							include _common/_sidebar
+						aside.sidebar#sidebar
 						.right_content
 							.sort
 								include _common/_sort
@@ -38,8 +37,9 @@ html(lang='ru')
 
 		include _common/_footer
 		script(type='text/babel' src='/js/phones.js')
+		script(type='text/babel' src='/js/sidebar.js')
 		script(src='bower/jquery/jquery.js')
 		script(src='bower/select2/dist/js/select2.min.js')
 		script(src='bower/jquery-ui/jquery-ui.min.js')
 		script(src='js/autocolumn.js')
-		script(src='/js/main.js')
+		script(src='js/main.js')

@@ -1,10 +1,12 @@
-var PHONES = [
+const PHONES = [
     {
     name :'Samsung GT-I9301I  GALAXY S 3',
     image : 'images/img/Samsung-GT-I9301I-s1.jpg',
-    images: [{image: 'images/img/Samsung-GT-I9301I-s1.jpg'},
+    images: [
+        {image: 'images/img/Samsung-GT-I9301I-s1.jpg'},
         {image: 'images/img/Samsung-GT-I9301I-s2.jpg'},
-        {image: 'images/img/Samsung-GT-I9301I-s3.jpg'}],
+        {image: 'images/img/Samsung-GT-I9301I-s3.jpg'}
+    ],
     articul :'128789',
     feature : [
         {name: 'Тип SIM-карты', value: 'Micro-SIM'},
@@ -22,9 +24,11 @@ var PHONES = [
 }, {
     name :'Microsoft Lumia 640 RM-1077',
     image : 'images/img/Microsoft-Lumia-640-s1.jpg',
-    images: [{image: 'images/img/Microsoft-Lumia-640-s1.jpg'},
+    images: [
+        {image: 'images/img/Microsoft-Lumia-640-s1.jpg'},
         {image: 'images/img/Microsoft-Lumia-640-s2.jpg'},
-        {image: 'images/img/Microsoft-Lumia-640-s3.jpg'}],
+        {image: 'images/img/Microsoft-Lumia-640-s3.jpg'}
+    ],
     articul :'321559',
     feature : [
         {name: 'Тип SIM-кары', value: 'Micro-SIM'},
@@ -42,9 +46,11 @@ var PHONES = [
 }, {
     name :'Archos 50 Oxygen Plus',
     image : 'images/img/Archos-50-Oxygen-Plus-s1.jpg',
-    images: [{image: 'images/img/Archos-50-Oxygen-Plus-s1.jpg'},
+    images: [
+        {image: 'images/img/Archos-50-Oxygen-Plus-s1.jpg'},
         {image: 'images/img/Archos-50-Oxygen-Plus-s2.jpg'},
-        {image: 'images/img/Archos-50-Oxygen-Plus-s3.jpg'}],
+        {image: 'images/img/Archos-50-Oxygen-Plus-s3.jpg'}
+    ],
     articul :'132489',
     feature : [
         {name: 'Тип SIM-кары', value: 'Micro-SIM'},
@@ -62,9 +68,11 @@ var PHONES = [
 }, {
     name :'Philips S398 Black',
     image : 'images/img/Philips-S398-Black-s1.jpg',
-    images: [{image: 'images/img/Philips-S398-Black-s1.jpg'},
+    images: [
+        {image: 'images/img/Philips-S398-Black-s1.jpg'},
         {image: 'images/img/Philips-S398-Black-s2.jpg'},
-        {image: 'images/img/Philips-S398-Black-s3.jpg'}],
+        {image: 'images/img/Philips-S398-Black-s3.jpg'}
+    ],
     articul :'321559',
     feature : [
         {name: 'Тип SIM-карты', value: null},
@@ -82,9 +90,11 @@ var PHONES = [
 }, {
     name :'Microsoft Lumia 430 RM-10',
     image : 'images/img/Microsoft-Lumia-430-RM-10-s1.jpg',
-    images: [{image: 'images/img/Microsoft-Lumia-430-RM-10-s1.jpg'},
+    images: [
+        {image: 'images/img/Microsoft-Lumia-430-RM-10-s1.jpg'},
         {image: 'images/img/Microsoft-Lumia-430-RM-10-s2.jpg'},
-        {image: 'images/img/Microsoft-Lumia-430-RM-10-s3.jpg'}],
+        {image: 'images/img/Microsoft-Lumia-430-RM-10-s3.jpg'}
+    ],
     articul :'965471',
     feature : [
         {name: 'Тип SIM-кары', value: 'Micro-SIM'},
@@ -102,9 +112,11 @@ var PHONES = [
 }, {
     name :'Senseit L301 Black ',
     image : 'images/img/Senseit-L301-Black-s1.jpg',
-    images: [{image: 'images/img/Senseit-L301-Black-s1.jpg'},
+    images: [
+        {image: 'images/img/Senseit-L301-Black-s1.jpg'},
         {image: 'images/img/Senseit-L301-Black-s2.jpg'},
-        {image: 'images/img/Senseit-L301-Black-s3.jpg'}],
+        {image: 'images/img/Senseit-L301-Black-s3.jpg'}
+    ],
     articul :'321419',
     feature : [
         {name: 'Тип SIM-кары', value: 'Micro-SIM'},
@@ -122,9 +134,11 @@ var PHONES = [
 }, {
     name :'HIGHSCREEN WinWin Black',
     image : 'images/img/HIGHSCREEN-WinWin-Black-s1.jpg',
-    images: [{image: 'images/img/HIGHSCREEN-WinWin-Black-s1.jpg'},
+    images: [
+        {image: 'images/img/HIGHSCREEN-WinWin-Black-s1.jpg'},
         {image: 'images/img/HIGHSCREEN-WinWin-Black-s2.jpg'},
-        {image: 'images/img/HIGHSCREEN-WinWin-Black-s3.jpg'}],
+        {image: 'images/img/HIGHSCREEN-WinWin-Black-s3.jpg'}
+    ],
     articul :'451781',
     feature : [
         {name: 'Тип SIM-кары', value: 'Micro-SIM'},
@@ -142,9 +156,11 @@ var PHONES = [
 }, {
     name :'Alcatel OT4013D PIXI 3 (2 SIM)',
     image : 'images/img/Alcatel-OT4013D-PIXI3-(2SIM)-s1.jpg',
-    images: [{image: 'images/img/Alcatel-OT4013D-PIXI3-(2SIM)-s1.jpg'},
+    images: [
+        {image: 'images/img/Alcatel-OT4013D-PIXI3-(2SIM)-s1.jpg'},
         {image: 'images/img/Alcatel-OT4013D-PIXI3-(2SIM)-s2.jpg'},
-        {image: 'images/img/Alcatel-OT4013D-PIXI3-(2SIM)-s3.jpg'}],
+        {image: 'images/img/Alcatel-OT4013D-PIXI3-(2SIM)-s3.jpg'}
+    ],
     articul :'321489',
     feature : [
         {name: 'Тип SIM-кары', value: 'Micro-SIM'},
@@ -162,9 +178,11 @@ var PHONES = [
 }, {
     name :'Fly IQ434 Era Nano 5',
     image : 'images/img/Fly-IQ434-Era-Nano-5-s1.jpg',
-    images: [{image: 'images/img/Fly-IQ434-Era-Nano-5-s1.jpg'},
+    images: [
+        {image: 'images/img/Fly-IQ434-Era-Nano-5-s1.jpg'},
         {image: 'images/img/Fly-IQ434-Era-Nano-5-s2.jpg'},
-        {image: 'images/img/Fly-IQ434-Era-Nano-5-s3.jpg'}],
+        {image: 'images/img/Fly-IQ434-Era-Nano-5-s3.jpg'}
+    ],
     articul :'987441',
     feature : [
         {name: 'Тип SIM-кары', value: 'Micro-SIM'},
@@ -182,10 +200,10 @@ var PHONES = [
 }];
 
 var MiniImage = React.createClass({
-    render: function() {
+    render() {
         return (
             <li className="mini__item">
-                <a href="#" className="slideshow_pic">
+                <a className="slideshow_pic" onClick={this.props.onClick} data={this.props.dataIndex}>
                     <img className="mini__img" src={this.props.image} />
                 </a>
             </li>
@@ -193,8 +211,8 @@ var MiniImage = React.createClass({
     }
 });
 
-var Feature = React.createClass({
-    render: function() {
+const Feature = React.createClass({
+    render() {
         return (
             <li className="features__item">
                 <div className="features_name">{this.props.name}</div>
@@ -204,36 +222,60 @@ var Feature = React.createClass({
     }
 });
 
-var Contact = React.createClass({
-    getInitialState: function() {
+const SlideShow = React.createClass({
+    getInitialState() {
+        return this.props;
+    },
+
+    selectMiniImage(event, id) {
+        const selectedImageIndex = id.split('$')[2][0];
+
+        this.setState({
+            activeIndex: selectedImageIndex,
+            bigImage : this.state.images[selectedImageIndex].image
+        })
+    },
+
+    render() {
+        return (
+            <div className="products__slideshow">
+                <div className="slideshow">
+                    <img className="big-photo" src={this.state.bigImage} alt={this.state.name} />
+                </div>
+                <ul className="mini__list">
+                    {
+                        this.state.images.map((image, i) => {
+                            return <MiniImage
+                                key = {i}
+                                dataIndex = {i}
+                                activeIndex = {this.state.activeIndex}
+                                image = {image.image}
+                                onClick = {this.selectMiniImage}
+                            />;
+                        })
+                    }
+                </ul>
+                <div className="products__articul">
+                    <span className="art"> Артикул </span>
+                    <span className="art_number">{this.state.articul}</span>
+                </div>
+            </div>
+        );
+    }
+});
+
+const Product = React.createClass({
+    getInitialState() {
         return {
             miniImages: this.props.images,
             features: this.props.feature
         };
     },
 
-    render: function() {
+    render() {
         return (
             <li className="products">
-                <div className="products__slideshow">
-                    <div className="slideshow">
-                        <img className="big-photo" src={this.props.image} alt={this.props.name} />
-                    </div>
-                    <ul className="mini__list">
-                        {
-                            this.state.miniImages.map((el, i) => {
-                                return <MiniImage
-                                    key={i}
-                                    image={el.image}
-                                />;
-                            })
-                        }
-                    </ul>
-                    <div className="products__articul">
-                        <span className="art"> Артикул </span>
-                        <span className="art_number">{this.props.articul}</span>
-                    </div>
-                </div>
+                <SlideShow images={this.props.images} bigImage={this.props.image} articul={this.props.articul} name={this.props.name} />
                 <div className="products_center_content">
                     <div className="products__title">{this.props.name}</div>
                     <div className="products__info">{this.props.info}</div>
@@ -242,9 +284,10 @@ var Contact = React.createClass({
                             {
                                 this.state.features.map((el, i) => {
                                     return <Feature
-                                        key={i}
-                                        name={el.name}
-                                        value={el.value}
+                                        key = {i}
+                                        name = {el.name}
+                                        value = {el.value}
+                                        activeIndex = '0'
                                     />;
                                 })
                             }
@@ -274,7 +317,7 @@ var Contact = React.createClass({
     }
 });
 
-var ContactsList = React.createClass({
+const ProductsList = React.createClass({
     getInitialState: function() {
         return {
             displayedContacts: PHONES
@@ -286,7 +329,7 @@ var ContactsList = React.createClass({
                 <ul className="products_list1">
                     {
                         this.state.displayedContacts.map((el, i) => {
-                            return <Contact
+                            return <Product
                                 key={i}
                                 name={el.name}
                                 info={el.info}
@@ -307,6 +350,6 @@ var ContactsList = React.createClass({
 });
 
 ReactDOM.render(
-    <ContactsList />,
+    <ProductsList />,
     document.getElementById("content")
 );
