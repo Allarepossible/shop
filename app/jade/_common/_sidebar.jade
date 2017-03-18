@@ -1,43 +1,44 @@
 .filters
-	ul.flagman__list
-		li.flagman__item
-			a(href="#" class="flagman__link") Флагманы
-		li.flagman__item.flagman__item-active
-			a(href="#" class="flagman__link") Бюджетная линейка	
-
-
-.filters
-	ul.basic__list
-		li.basic__item
-			a(href="#").filters__title.active Наличие в магазинах
-			ul.basic_inner
-				li.availible__item
-					input(type="radio" id="all" name="availible" checked).availible__list
-					label(for="all").availible__label Во всех магазинах
-				li.availible__item
-					input(type="radio" id="near" name="availible").availible__list
-					label(for="near").availible__label В ближайшем ко мне магазине
-		li.basic__item
-			a(href="#").filters__title.active Бренды
-			ul.basic_inner
-				+checkbox(['Lenovo', 'Apple', 'Samsung', 'Asus', 'Motorola'])
-				a(href="#").reset-filter Сбросить фильтр
-		li.basic__item
-			a(href="#").filters__title.active Цена
-			ul.basic_inner
-				.price_range
-					div.price_range__box
-						span.price_range__text от
-						input(type="text" id="price_range1").price_range__input
-						span.price_range__text до
-						input(type="text" id="price_range2").price_range__input
-						div.price_range__slider
-		li.basic__item
-			a(href="#").filters__title.active Цвет
-			ul.basic_inner
-				+colorChoose(['white', 'gray', 'black', 'blue', 'red', 'yellow', 'orange', 'green', 'skyblue', 'violet', 'pink', 'brown'])
-		li.basic__item
-			a(href="#").filters__title.active Операционная система
-			ul.basic_inner
-				+checkbox(['Android', 'iOS', 'Windows Mobile', 'Symbian', 'Custom'])
-				a(href="#").reset-filter Сбросить фильтр
+	ul.filters__list
+		li.filters__item
+			a(href="#").filter__title.active Наличие в магазинах
+				i.manage-filter
+			.filter.filter_type_shop
+				ul.filter__list
+					li.filter__item.filter__item_type_radio
+						input(type="radio" id="all" name="availible" checked).input.input_type_radio
+						label(for="all").label.label_type_radio Во всех магазинах
+					li.filter__item.filter__item_type_radio
+						input(type="radio" id="near" name="availible").input.input_type_radio
+						label(for="near").label.label_type_radio В ближайшем ко мне магазине
+		li.filters__item
+			a(href="#").filter__title.active Бренды
+				i.manage-filter
+			.filter.filter_type_brands
+				ul.filter__list
+					+checkbox(['Lenovo', 'Apple', 'Samsung', 'Asus', 'Motorola'])
+					a(href="#").reset-filter Сбросить фильтр
+		li.filters__item
+			a(href="#").filter__title.active Цена
+				i.manage-filter
+			.filter.filter_type_price
+				.price-range
+					div.price-range__box
+						span.price-range__text от
+						input(type="text" id="price-range1").price-range__input
+						span.price-range__text до
+						input(type="text" id="price-range2").price-range__input
+					div.price-range__slider
+		li.filters__item
+			a(href="#").filter__title.active Цвет
+				i.manage-filter
+			.filter.filter_type_color
+				ul.filter__list
+					+colorChoose(['white', 'gray', 'black', 'blue', 'red', 'yellow', 'orange', 'green', 'skyblue', 'violet', 'pink', 'brown'])
+		li.filters__item
+			a(href="#").filter__title.active Операционная система
+				i.manage-filter
+			.filter.filter_type_oc
+				ul.filter__list
+					+checkbox(['Android', 'iOS', 'Windows Mobile', 'Symbian', 'Custom'])
+					a(href="#").reset-filter Сбросить фильтр
