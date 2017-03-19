@@ -106,48 +106,55 @@ const Filter = React.createClass({
     },
 
     render() {
+        const opened = this.props.closedFilters.indexOf(this.props.id) === -1;
+        const active = opened ? "active" : "";
+
         return (
             <li className="filters__item">
-                <a href="#" className="filter__title active">{this.props.name}<i className="manage-filter"></i></a>
-                <div className={"filter filter_type_" + this.props.id}>
-                    <ul className="filter__list">
-                        {
-                            this.props.type === 'checkbox' &&
-                            this.state.values.map((el, i) => {
-                                return <Checkbox
-                                key = {i}
-                                name = {el}
-                                />;
-                            })
-                        }
-                        {
-                            this.props.type === 'select' &&
-                            this.state.values.map((el, i) => {
-                                return <Select
-                                    key = {i}
-                                    name = {el}
-                                />;
-                            })
-                        }
-                        {
-                            this.props.type === 'color' &&
-                            this.state.values.map((el, i) => {
-                                return <Color
-                                    key = {i}
-                                    name = {el}
-                                />;
-                            })
-                        }
-                        {
-                            this.props.type === 'range-box' &&
-                            <RangeBox type={this.props.type} />
-                        }
-                        {
-                            this.props.reset === true &&
-                            <a href="#" className="reset-filter">Сбросить фильтр</a>
-                        }
-                    </ul>
-                </div>
+                <a href="#" className={"filter__title " + active} onClick={this.props.onTitleClick}>{this.props.name}
+                <i className="manage-filter"></i></a>
+                {
+                    opened &&
+                    <div className={"filter filter_type_" + this.props.id}>
+                        <ul className="filter__list">
+                            {
+                                this.props.type === 'checkbox' &&
+                                this.state.values.map((el, i) => {
+                                    return <Checkbox
+                                        key={i}
+                                        name={el}
+                                    />;
+                                })
+                            }
+                            {
+                                this.props.type === 'select' &&
+                                this.state.values.map((el, i) => {
+                                    return <Select
+                                        key={i}
+                                        name={el}
+                                    />;
+                                })
+                            }
+                            {
+                                this.props.type === 'color' &&
+                                this.state.values.map((el, i) => {
+                                    return <Color
+                                        key={i}
+                                        name={el}
+                                    />;
+                                })
+                            }
+                            {
+                                this.props.type === 'range-box' &&
+                                <RangeBox type={this.props.type}/>
+                            }
+                            {
+                                this.props.reset === true &&
+                                <a href="#" className="reset-filter">Сбросить фильтр</a>
+                            }
+                        </ul>
+                    </div>
+                }
             </li>
         )
     }
@@ -156,15 +163,30 @@ const Filter = React.createClass({
 const Filters = React.createClass({
     getInitialState() {
         return {
-            displayedFilters: FILTERS
+            allFilters: FILTERS,
+            indexsOfClosedFilters: []
         };
     },
+
+    onTitleClick(event, id) {
+        const clickedTitleNumber = id.split('$')[1][0];
+        const filterId = this.state.allFilters[clickedTitleNumber].id;
+        const array = this.state.indexsOfClosedFilters;
+        const position = array.indexOf(filterId);
+
+        const newArray = position !== -1 ?
+            array.filter((index) => index !== filterId) :
+            array.concat(filterId);
+
+        this.setState({indexsOfClosedFilters: newArray});
+    },
+
     render() {
         return (
             <div className="filters">
                 <ul className="filters__list">
                     {
-                        this.state.displayedFilters.map((el, i) => {
+                        this.state.allFilters.map((el, i) => {
                             return <Filter
                                 key = {i}
                                 name = {el.name}
@@ -172,6 +194,8 @@ const Filters = React.createClass({
                                 type = {el.type}
                                 values = {el.values}
                                 reset = {el.reset}
+                                closedFilters = {this.state.indexsOfClosedFilters}
+                                onTitleClick = {this.onTitleClick}
                             />;
                         })
                     }

@@ -9,48 +9,8 @@ var moduleShop = (function () {
     };
 
     var _setUpListeners = function () {
-        $('.filter__title').on('click', _accordeon);
-        $('.color__link').on('click', _colorChange);
         $('.reset-filter').on('click', _resetCheckbox);
         $('.sort__view').on('click', _changeSortView);
-        $('.slideshow_pic').on('click', _slideShow);
-    };
-
-    // Аккордеон
-    var _accordeon = function (e) {
-        e.preventDefault();
-
-        var $this = $(this),
-            item = $this.closest('.filters__item'),
-            content = item.find('.filter'),
-            duration = 300;
-
-        if($this.hasClass('active')) {
-            content.stop(true, true).slideUp(duration);
-        } else {
-            content.stop(true, true).slideDown(duration);
-        }
-
-        $this.toggleClass('active');
-    };
-
-    // Фильтр по цветам
-    var _colorChange = function (e) {
-      e.preventDefault();
-      $(this).toggleClass('choosen');
-    };
-
-    //очистка чекбоксов
-    var _resetCheckbox = function (e) {
-        e.preventDefault();
-
-        var $this = $(this),
-            item = $this.siblings('.checkbox__item'),
-            inputs = item.find('input:checkbox');
-
-        $.each(inputs, function() {
-            inputs.removeAttr('checked');
-        });
     };
 
     // Вид продукции
@@ -103,23 +63,6 @@ var moduleShop = (function () {
       });
     }
 
-    // slideshow
-    var _slideShow = function(e) {
-      e.preventDefault();
-
-      var item = $(this).closest('.mini__item'),
-          container = $(this).closest('.products__slideshow'),
-          display = container.find('.slideshow'),
-          path = item.find('img').attr('src'),
-          duration = 200;
-
-      if (!item.hasClass('mini__item-active')) {
-        item.addClass('mini__item-active').siblings().removeClass('mini__item-active');
-        display.find('img').fadeOut(duration, function() {
-          $(this).attr('src', path).fadeIn(duration);
-        });
-      };
-    };
 
     // first
     var _firstCome = function() {
